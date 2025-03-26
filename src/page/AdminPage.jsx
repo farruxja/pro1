@@ -29,7 +29,7 @@ const AdminPage = () => {
               <td>{user.id}</td>
               <td>{user.firstName} {user.lastName}</td>
               <td>
-                <QRCode value={`https://300/menu/${user.id}`} size={100} />
+                <QRCode value={`https://polite-gnome-e4fcfe.netlify.app/menu/${user.id}`} size={100} />
               </td>
             </tr>
           ))}
