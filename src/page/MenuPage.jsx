@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 
 
 const MenuPage = () => {
@@ -22,12 +22,13 @@ useEffect(() => {
 
   return (
 
-    <div>
+    <main className="manue">
       <h1>Menu Page {tableId}</h1>
       <p>{customer?.id}</p>
       <p>{customer?.firstName}</p>
+      <Outlet/>
      
-    </div>
+    </main>
   );
 };
 

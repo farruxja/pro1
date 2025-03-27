@@ -8,6 +8,9 @@ import HomePage from './page/HomePage';
 import AdminPage from './page/AdminPage';
 import MenuPage from './page/MenuPage';
 import ScanQRPage from './page/ScanQRPage';
+import Burger from './component/Burger';
+import Kabab from './component/Kabab';
+import Drink from './component/Drink';
 
 
 
@@ -29,6 +32,20 @@ const myRouter=createBrowserRouter([{
     {
       path:"/menu/:tableId",
       element:<MenuPage/>,
+      children:[
+        {
+          path:"/burger",
+          element:<Burger/>,
+        },
+        {
+          path:"/kabab",
+          element:<Kabab/>,
+        },
+        {
+          path:"/desert",
+          element:<Drink/>
+        }
+      ]
 
     },
     { path: "/scan-qr", 
