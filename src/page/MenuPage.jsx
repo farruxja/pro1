@@ -1,17 +1,20 @@
-import React, { useEffect, useState } from "react";
-import { Outlet, useParams } from "react-router-dom";
-
+import React, { useEffect} from "react";
+import { NavLink, Outlet, useParams } from "react-router-dom";
+import '../style/menu.css'
+import MenuHero from "../component/MenuHero";
 
 const MenuPage = () => {
 const {tableId}= useParams()
-const [customer, setCostomer]= useState(null)
+
 
 useEffect(() => {
   async function fetchCustomer() {
     try {
       let fetchData = await fetch(`https://dummyjson.com/users/${tableId}`);
       let json = await fetchData.json();
-      setCostomer(json);
+      console.log(json.data)
+
+ 
     } catch (error) {
       console.error("Xatolik yuz berdi:", error);
     }
@@ -23,10 +26,20 @@ useEffect(() => {
   return (
 
     <main className="manue">
-      <h1>Menu Page {tableId}</h1>
-      <p>{customer?.id}</p>
-      <p>{customer?.firstName}</p>
-      <Outlet/>
+     <MenuHero/>
+     <div className="cadigory">
+      <NavLink></NavLink>
+      <NavLink></NavLink>
+      <NavLink></NavLink>
+      <NavLink></NavLink>
+     </div>
+     
+
+     <Outlet/>
+    
+
+      
+      
      
     </main>
   );

@@ -1,0 +1,25 @@
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.container{
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px ;
+
+}
+:root {
+    --font-family: "Inter", sans-serif;
+    --second-family: "SF Pro Display", sans-serif;
+    --third-family: "Roboto", sans-serif;
+    --font3: "SF Pro Text", sans-serif;
+    --font4: "Action Sans", sans-serif;
+    --font5: "Poppins", sans-serif;
+    --font6: "Plus Jakarta Sans", sans-serif;
+  }
+  a{
+    text-decoration: none;
+  }

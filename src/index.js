@@ -11,6 +11,8 @@ import ScanQRPage from './page/ScanQRPage';
 import Burger from './component/Burger';
 import Kabab from './component/Kabab';
 import Drink from './component/Drink';
+import Desert from './component/Desert';
+import ChegirmaPage from './page/ChegirmaPage';
 
 
 
@@ -34,16 +36,20 @@ const myRouter=createBrowserRouter([{
       element:<MenuPage/>,
       children:[
         {
-          path:"/burger",
+          index:true,
           element:<Burger/>,
         },
         {
-          path:"/kabab",
+          path:"kabab",
           element:<Kabab/>,
         },
         {
-          path:"/desert",
+          path:"drink",
           element:<Drink/>
+        },
+        {
+          path:"desert",
+          element:<Desert/>
         }
       ]
 
@@ -51,6 +57,10 @@ const myRouter=createBrowserRouter([{
     { path: "/scan-qr", 
     element:<ScanQRPage/>
    },
+   {
+    path:"/allskid",
+    element:<ChegirmaPage/>
+   }
  
   ]
 }])

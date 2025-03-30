@@ -1,0 +1,8 @@
+.menu__hero h4{
+    margin-top: 70px ;
+    margin-bottom: 14px ;
+    font-family: var(--font5);
+font-weight: 500;
+font-size: 13px;
+color: #6a6a6a;
+}
